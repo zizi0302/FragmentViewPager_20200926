@@ -9,6 +9,15 @@ import kr.co.fragmentviewpager_20200926.fragments.MyNameFragment
 
 class MainViewPagerAdapter(fm : FragmentManager) : FragmentPagerAdapter(fm) {
 
+    override fun getPageTitle(position: Int): CharSequence? {
+
+        return when(position) {
+            0 -> "이름"
+            1 -> "나이"
+            2 -> "거주지"
+        }
+    }
+
     override fun getItem(position: Int): Fragment {
 
         if(position == 0) {
